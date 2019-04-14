@@ -6,7 +6,7 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 ext {
-    gson    = '2.8.5'
+    gson = '2.8.5'
 }
 
 repositories {

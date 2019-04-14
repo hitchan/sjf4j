@@ -6,7 +6,7 @@ group 'dev.kryotek.sjf4j'
 version '1.0.0-SNAPSHOT'
 
 ext {
-    jetbrainsAnnotations    = '16.0.2'
-    bouncyCastle            = '1.61'
-    junit                   = '5.4.0'
+    jetbrainsAnnotations = '16.0.2'
+    bouncyCastle = '1.61'
+    junit = '5.4.0'
 }

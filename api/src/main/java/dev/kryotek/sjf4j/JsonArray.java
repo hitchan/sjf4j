@@ -10,33 +10,61 @@ public interface JsonArray {
 
     Optional<Json> get(int index);
 
-    Optional<JsonObject> getAsJsonObject(int index);
+    default Optional<JsonObject> getAsJsonObject(int index) {
+        return get(index).map(json -> json.getAsJsonObject().orElse(null));
+    }
 
-    Optional<JsonArray> getAsJsonArray(int index);
+    default Optional<JsonArray> getAsJsonArray(int index) {
+        return get(index).map(json -> json.getAsJsonArray().orElse(null));
+    }
 
-    Optional<String> getAsString(int index);
+    default Optional<String> getAsString(int index) {
+        return get(index).map(json -> json.getAsString().orElse(null));
+    }
 
-    Optional<Character> getAsCharacter(int index);
+    default Optional<Character> getAsCharacter(int index) {
+        return get(index).map(json -> json.getAsCharacter().orElse(null));
+    }
 
-    Optional<Number> getAsNumber(int index);
+    default Optional<Number> getAsNumber(int index) {
+        return get(index).map(json -> json.getAsNumber().orElse(null));
+    }
 
-    Optional<BigInteger> getAsBigInteger(int index);
+    default Optional<BigInteger> getAsBigInteger(int index) {
+        return get(index).map(json -> json.getAsBigInteger().orElse(null));
+    }
 
-    Optional<Long> getAsLong(int index);
+    default Optional<Long> getAsLong(int index) {
+        return get(index).map(json -> json.getAsLong().orElse(null));
+    }
 
-    Optional<Integer> getAsInteger(int index);
+    default Optional<Integer> getAsInteger(int index) {
+        return get(index).map(json -> json.getAsInteger().orElse(null));
+    }
 
-    Optional<Short> getAsShort(int index);
+    default Optional<Short> getAsShort(int index) {
+        return get(index).map(json -> json.getAsShort().orElse(null));
+    }
 
-    Optional<Byte> getAsByte(int index);
+    default Optional<Byte> getAsByte(int index) {
+        return get(index).map(json -> json.getAsByte().orElse(null));
+    }
 
-    Optional<BigDecimal> getAsBigDecimal(int index);
+    default Optional<BigDecimal> getAsBigDecimal(int index) {
+        return get(index).map(json -> json.getAsBigDecimal().orElse(null));
+    }
 
-    Optional<Double> getAsDouble(int index);
+    default Optional<Double> getAsDouble(int index) {
+        return get(index).map(json -> json.getAsDouble().orElse(null));
+    }
 
-    Optional<Float> getAsFloat(int index);
+    default Optional<Float> getAsFloat(int index) {
+        return get(index).map(json -> json.getAsFloat().orElse(null));
+    }
 
-    Optional<Boolean> getAsBoolean(int index);
+    default Optional<Boolean> getAsBoolean(int index) {
+        return get(index).map(json -> json.getAsBoolean().orElse(null));
+    }
 
     int size();
 

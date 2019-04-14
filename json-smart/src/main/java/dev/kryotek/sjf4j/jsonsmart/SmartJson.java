@@ -40,122 +40,122 @@ public class SmartJson implements Json {
 
     @Override
     public boolean isString() {
-        return false;
+        return root instanceof String;
     }
 
     @Override
     public Optional<String> getAsString() {
-        return Optional.empty();
+        return Optional.ofNullable(isString() ? ((String) root) : null);
     }
 
     @Override
     public boolean isCharacter() {
-        return false;
+        return root instanceof Character;
     }
 
     @Override
     public Optional<Character> getAsCharacter() {
-        return Optional.empty();
+        return Optional.ofNullable(isCharacter() ? ((Character) root) : null);
     }
 
     @Override
     public boolean isNumber() {
-        return false;
+        return root instanceof Number;
     }
 
     @Override
     public Optional<Number> getAsNumber() {
-        return Optional.empty();
+        return Optional.ofNullable(isNumber() ? ((Number) root) : null);
     }
 
     @Override
     public boolean isBigInteger() {
-        return false;
+        return root instanceof BigInteger;
     }
 
     @Override
     public Optional<BigInteger> getAsBigInteger() {
-        return Optional.empty();
+        return Optional.ofNullable(isBigInteger() ? ((BigInteger) root) : null);
     }
 
     @Override
     public boolean isLong() {
-        return false;
+        return root instanceof Long;
     }
 
     @Override
     public Optional<Long> getAsLong() {
-        return Optional.empty();
+        return Optional.ofNullable(isLong() ? ((Long) root) : null);
     }
 
     @Override
     public boolean isInteger() {
-        return false;
+        return root instanceof Integer;
     }
 
     @Override
     public Optional<Integer> getAsInteger() {
-        return Optional.empty();
+        return Optional.ofNullable(isInteger() ? ((Integer) root) : null);
     }
 
     @Override
     public boolean isShort() {
-        return false;
+        return root instanceof Short;
     }
 
     @Override
     public Optional<Short> getAsShort() {
-        return Optional.empty();
+        return Optional.ofNullable(isShort() ? ((Short) root) : null);
     }
 
     @Override
     public boolean isByte() {
-        return false;
+        return root instanceof Byte;
     }
 
     @Override
     public Optional<Byte> getAsByte() {
-        return Optional.empty();
+        return Optional.ofNullable(isByte() ? ((Byte) root) : null);
     }
 
     @Override
     public boolean isBigDecimal() {
-        return false;
+        return root instanceof BigDecimal;
     }
 
     @Override
     public Optional<BigDecimal> getAsBigDecimal() {
-        return Optional.empty();
+        return Optional.ofNullable(isBigDecimal() ? ((BigDecimal) root) : null);
     }
 
     @Override
     public boolean isDouble() {
-        return false;
+        return root instanceof Double;
     }
 
     @Override
     public Optional<Double> getAsDouble() {
-        return Optional.empty();
+        return Optional.ofNullable(isDouble() ? ((Double) root) : null);
     }
 
     @Override
     public boolean isFloat() {
-        return false;
+        return root instanceof Float;
     }
 
     @Override
     public Optional<Float> getAsFloat() {
-        return Optional.empty();
+        return Optional.ofNullable(isFloat() ? ((Float) root) : null);
     }
 
     @Override
     public boolean isBoolean() {
-        return false;
+        return root instanceof Boolean;
     }
 
     @Override
     public Optional<Boolean> getAsBoolean() {
-        return Optional.empty();
+        return Optional.ofNullable(isBoolean() ? ((Boolean) root) : null);
     }
 
 }

@@ -12,33 +12,61 @@ public interface JsonObject {
 
     Optional<Json> get(String member);
 
-    Optional<JsonObject> getAsJsonObject(String member);
+    default Optional<JsonObject> getAsJsonObject(String member) {
+        return get(member).map(json -> json.getAsJsonObject().orElse(null));
+    }
 
-    Optional<JsonArray> getAsJsonArray(String member);
+    default Optional<JsonArray> getAsJsonArray(String member) {
+        return get(member).map(json -> json.getAsJsonArray().orElse(null));
+    }
 
-    Optional<String> getAsString(String member);
+    default Optional<String> getAsString(String member) {
+        return get(member).map(json -> json.getAsString().orElse(null));
+    }
 
-    Optional<Character> getAsCharacter(String member);
+    default Optional<Character> getAsCharacter(String member) {
+        return get(member).map(json -> json.getAsCharacter().orElse(null));
+    }
 
-    Optional<Number> getAsNumber(String member);
+    default Optional<Number> getAsNumber(String member) {
+        return get(member).map(json -> json.getAsNumber().orElse(null));
+    }
 
-    Optional<BigInteger> getAsBigInteger(String member);
+    default Optional<BigInteger> getAsBigInteger(String member) {
+        return get(member).map(json -> json.getAsBigInteger().orElse(null));
+    }
 
-    Optional<Long> getAsLong(String member);
+    default Optional<Long> getAsLong(String member) {
+        return get(member).map(json -> json.getAsLong().orElse(null));
+    }
 
-    Optional<Integer> getAsInteger(String member);
+    default Optional<Integer> getAsInteger(String member) {
+        return get(member).map(json -> json.getAsInteger().orElse(null));
+    }
 
-    Optional<Short> getAsShort(String member);
+    default Optional<Short> getAsShort(String member) {
+        return get(member).map(json -> json.getAsShort().orElse(null));
+    }
 
-    Optional<Byte> getAsByte(String member);
+    default Optional<Byte> getAsByte(String member) {
+        return get(member).map(json -> json.getAsByte().orElse(null));
+    }
 
-    Optional<BigDecimal> getAsBigDecimal(String member);
+    default Optional<BigDecimal> getAsBigDecimal(String member) {
+        return get(member).map(json -> json.getAsBigDecimal().orElse(null));
+    }
 
-    Optional<Double> getAsDouble(String member);
+    default Optional<Double> getAsDouble(String member) {
+        return get(member).map(json -> json.getAsDouble().orElse(null));
+    }
 
-    Optional<Float> getAsFloat(String member);
+    default Optional<Float> getAsFloat(String member) {
+        return get(member).map(json -> json.getAsFloat().orElse(null));
+    }
 
-    Optional<Boolean> getAsBoolean(String member);
+    default Optional<Boolean> getAsBoolean(String member) {
+        return get(member).map(json -> json.getAsBoolean().orElse(null));
+    }
 
     int size();
 

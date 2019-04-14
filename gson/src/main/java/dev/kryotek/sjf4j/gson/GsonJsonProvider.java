@@ -17,10 +17,4 @@ public class GsonJsonProvider implements JsonProvider {
         return JsonElement.class.isAssignableFrom(clazz);
     }
 
-//    public static void main(String[] args) {
-//        Object json = new JsonObject();
-//        Json converted = JsonFactory.wrap(json);
-//        System.out.println(converted);
-//    }
-
 }
