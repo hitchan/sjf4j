@@ -3,7 +3,6 @@ package dev.kryotek.sjf4j.jsonsmart;
 import dev.kryotek.sjf4j.Json;
 import dev.kryotek.sjf4j.JsonArray;
 import dev.kryotek.sjf4j.JsonObject;
-import dev.kryotek.sjf4j.JsonPrimitive;
 import net.minidev.json.JSONArray;
 
 import java.math.BigDecimal;
@@ -19,6 +18,11 @@ public class SmartJsonArray implements JsonArray {
     }
 
     @Override
+    public boolean has(int index) {
+        return false;
+    }
+
+    @Override
     public Optional<Json> get(int index) {
         return Optional.empty();
     }
@@ -30,11 +34,6 @@ public class SmartJsonArray implements JsonArray {
 
     @Override
     public Optional<JsonArray> getAsJsonArray(int index) {
-        return Optional.empty();
-    }
-
-    @Override
-    public Optional<JsonPrimitive> getAsJsonPrimitive(int index) {
         return Optional.empty();
     }
 

@@ -3,7 +3,6 @@ package dev.kryotek.sjf4j.jsonsmart;
 import dev.kryotek.sjf4j.Json;
 import dev.kryotek.sjf4j.JsonArray;
 import dev.kryotek.sjf4j.JsonObject;
-import dev.kryotek.sjf4j.JsonPrimitive;
 import net.minidev.json.JSONObject;
 
 import java.math.BigDecimal;
@@ -37,11 +36,6 @@ public class SmartJsonObject implements JsonObject {
 
     @Override
     public Optional<JsonArray> getAsJsonArray(String member) {
-        return Optional.empty();
-    }
-
-    @Override
-    public Optional<JsonPrimitive> getAsJsonPrimitive(String member) {
         return Optional.empty();
     }
 

@@ -6,13 +6,13 @@ import java.util.Optional;
 
 public interface JsonArray {
 
+    boolean has(int index);
+
     Optional<Json> get(int index);
 
     Optional<JsonObject> getAsJsonObject(int index);
 
     Optional<JsonArray> getAsJsonArray(int index);
-
-    Optional<JsonPrimitive> getAsJsonPrimitive(int index);
 
     Optional<String> getAsString(int index);
 

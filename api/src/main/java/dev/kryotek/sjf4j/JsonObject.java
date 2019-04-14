@@ -16,8 +16,6 @@ public interface JsonObject {
 
     Optional<JsonArray> getAsJsonArray(String member);
 
-    Optional<JsonPrimitive> getAsJsonPrimitive(String member);
-
     Optional<String> getAsString(String member);
 
     Optional<Character> getAsCharacter(String member);
