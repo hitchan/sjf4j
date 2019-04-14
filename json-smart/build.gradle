@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
     implementation project(':api')
-    compile("net.minidev:json-smart:2.3")
+    implementation("net.minidev:json-smart:2.3")
     compileOnly("org.jetbrains:annotations:${jetbrainsAnnotations}")
     testCompile("org.junit.jupiter:junit-jupiter-api:${junit}")
 }
