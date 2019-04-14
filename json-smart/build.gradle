@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+ext {
+    jsonSmartVersion = '2.3'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation project(':api')
+    compile("net.minidev:json-smart:2.3")
+    compileOnly("org.jetbrains:annotations:${jetbrainsAnnotations}")
+    testCompile("org.junit.jupiter:junit-jupiter-api:${junit}")
+}

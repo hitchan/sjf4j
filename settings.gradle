@@ -1,0 +1,5 @@
+rootProject.name = 'sjf4j'
+include 'api'
+include 'gson'
+include 'json-smart'
+

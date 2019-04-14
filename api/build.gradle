@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compileOnly("org.jetbrains:annotations:${jetbrainsAnnotations}")
+    testCompile("org.junit.jupiter:junit-jupiter-api:${junit}")
+}

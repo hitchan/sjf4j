@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+ext {
+    gson    = '2.8.5'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation project(':api')
+    implementation("com.google.code.gson:gson:${gson}")
+    compileOnly("org.jetbrains:annotations:${jetbrainsAnnotations}")
+    testCompile("org.junit.jupiter:junit-jupiter-api:${junit}")
+}

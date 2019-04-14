@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="dev.kryotek.api.main" target="1.8" />
+      <module name="dev.kryotek.api.test" target="1.8" />
+      <module name="dev.kryotek.sjf4j.gson.main" target="1.8" />
+      <module name="dev.kryotek.sjf4j.gson.test" target="1.8" />
+      <module name="dev.kryotek.sjf4j.main" target="1.8" />
+      <module name="dev.kryotek.sjf4j.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
